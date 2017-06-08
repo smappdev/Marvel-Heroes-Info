@@ -5,10 +5,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import es.hol.smappdev.marvel_heroes_info.R;
 
 
-public class HeroListViewHolder extends RecyclerView.ViewHolder {
+public class HeroListViewHolder extends RecyclerView.ViewHolder{
 
     private String heroName;
     private String heroThumbnail;
@@ -28,6 +30,7 @@ public class HeroListViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setHeroThumbnail(String heroThumbnail) {
+        Picasso.with(itemView.getContext()).load(heroThumbnail).into(heroImageView);
         this.heroThumbnail = heroThumbnail;
     }
 }

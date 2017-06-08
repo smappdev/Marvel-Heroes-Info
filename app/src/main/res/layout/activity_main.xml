@@ -7,18 +7,20 @@
     android:layout_height="match_parent"
     tools:context="es.hol.smappdev.marvel_heroes_info.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/heroes_recyclerview"
+    <FrameLayout
+        android:id="@+id/hero_list_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:name="es.hol.smappdev.marvel_heroes_info.fragments.HeroListFragment"
+        tools:layout="@layout/fragment_hero_list"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+    </FrameLayout>
 
+    <FrameLayout
+        android:id="@+id/hero_detail_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="es.hol.smappdev.marvel_heroes_info.fragments.HeroDetailFragment"
+        />
 </android.support.constraint.ConstraintLayout>
